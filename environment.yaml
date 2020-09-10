@@ -1,0 +1,9 @@
+channels:
+  - scipopt
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python>=3.6
+  - cython
+  - numpy>=1.4
