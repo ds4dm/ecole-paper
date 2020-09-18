@@ -8,6 +8,7 @@ Gasse, Chételat, Ferroni, Charlin, and Lodi (2019) in Advances in Neural Inform
 ```bash
 git submodule update --init --recursive
 conda env create --name ecole_vs_gasse --file environment.yaml
+conda activate ecole_vs_gasse
 conda env update --file vendor/ecole/conda-dev.yml
 cmake -B ecole_build -S vendor/ecole -D CMAKE_BUILD_TYPE=Release
 pip install ecole_build/python
