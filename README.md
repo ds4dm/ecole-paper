@@ -11,8 +11,9 @@ conda env create --name ecole_vs_gasse --file environment.yaml
 conda activate ecole_vs_gasse
 conda env update --file vendor/ecole/conda-dev.yml
 cmake -B ecole_build -S vendor/ecole -D CMAKE_BUILD_TYPE=Release
-cmake --build ecole_build
+cmake --build ecole_build --parallel
 pip install ecole_build/python
 pip install vendor/PySCIPOpt-Gasse/
+pip install git+https://github.com/ds5dm/learn2branch@v1.0.0
 pip install .
 ```
