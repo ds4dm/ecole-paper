@@ -1,7 +1,7 @@
 import learn2branch.utilities as l2b
 
 
-class NodeBipartite:
+class NodeBipartite_L2B:
 
     def before_reset(self, model):
         self.buffer = {}
@@ -12,11 +12,10 @@ class NodeBipartite:
         return l2b.extract_state(model.as_pyscipopt(), self.buffer)
 
 
-class Khalil2016:
+class Khalil2016_L2B:
 
     def before_reset(self, model):
         self.buffer = {}
-        raise NotImplementedError
 
     def extract(self, model, done):
         if done:
