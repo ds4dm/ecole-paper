@@ -13,7 +13,5 @@ conda env update --file vendor/ecole/conda-dev.yml
 cmake -B ecole_build -S vendor/ecole -D ECOLE_BENCHMARK=ON
 cmake --build ecole_build --parallel
 pip install ecole_build/python
-pip install vendor/PySCIPOpt-Gasse/
-pip install git+https://github.com/ds4dm/learn2branch@v1.0.0
 pip install .
 ```

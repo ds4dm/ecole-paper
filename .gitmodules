@@ -1,7 +1,3 @@
-[submodule "PySCIPOpt-Gasse"]
-	path = vendor/PySCIPOpt-Gasse
-	url = git@github.com:ds4dm/PySCIPOpt.git
-	branch = ecole-benchmark
 [submodule "ecole"]
 	path = vendor/ecole
 	url = git@github.com:ds4dm/ecole.git

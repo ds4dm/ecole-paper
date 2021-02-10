@@ -4,6 +4,11 @@ channels:
   - defaults
 
 dependencies:
-  - python>=3.6
+  - python>=3.7
   - cython
   - numpy>=1.4
+  - scip
+  - pip
+  - pip:
+    - git+https://github.com/ds4dm/PySCIPOpt.git@ecole-benchmark
+    - git+https://github.com/ds4dm/learn2branch@v1.0.0
