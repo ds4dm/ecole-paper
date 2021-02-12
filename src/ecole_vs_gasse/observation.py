@@ -1,8 +1,7 @@
 import learn2branch.utilities as l2b
 
 
-class NodeBipartite_L2B:
-
+class NodeBipartite:
     def before_reset(self, model):
         self.buffer = {}
 
@@ -12,8 +11,7 @@ class NodeBipartite_L2B:
         return l2b.extract_state(model.as_pyscipopt(), self.buffer)
 
 
-class Khalil2016_L2B:
-
+class Khalil2016:
     def before_reset(self, model):
         self.buffer = {}
 
@@ -29,4 +27,3 @@ class Khalil2016_L2B:
 
         cands, *_ = pyscipopt_model.getPseudoBranchCands()
         return l2b.extract_khalil_variable_features(pyscipopt_model, cands, self.buffer)
-
