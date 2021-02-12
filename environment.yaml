@@ -1,5 +1,4 @@
 channels:
-  - scipopt
   - conda-forge
   - defaults
 
