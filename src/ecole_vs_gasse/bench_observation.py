@@ -35,8 +35,8 @@ def make_information_functions() -> Dict[str, ecole.typing.InformationFunction]:
     observation functions.
     """
     information_funcs = {
-        "n_nodes": ecole.reward.NNodes(),
-        "n_lp_iterations": ecole.reward.LpIterations(),
+        "n_nodes": ecole.reward.NNodes().cumsum(),
+        "n_lp_iterations": ecole.reward.LpIterations().cumsum(),
     }
     for module in (ecole, ecole_vs_gasse):
         for obs_func_name in ("NodeBipartite", "Khalil2016"):
@@ -44,7 +44,11 @@ def make_information_functions() -> Dict[str, ecole.typing.InformationFunction]:
                 clock_name = "wall_time_s" if wall else "cpu_time_s"
                 name = f"{module.__name__}:{obs_func_name}:{clock_name}"
                 obs_func = getattr(module.observation, obs_func_name)()
-                information_funcs[name] = ecole.data.TimedFunction(obs_func, wall=wall)
+                # TimedFunction.cumsum is not available so we create it manually
+                information_funcs[name] = ecole.reward.Cumulative(
+                    ecole.data.TimedFunction(obs_func, wall=wall), lambda x, y: x + y, 0.0, "CumSum"
+                )
+
     return information_funcs
 
 
