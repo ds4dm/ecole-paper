@@ -1,6 +1,5 @@
-# Ecole vs Gasse et al. 2019
-
-This repository contains the code to compare Ecole and
+# Ecole Paper
+This repository contains the conda for the Ecole paper, including comparison with
 *[Exact combinatorial optimization with graph convolutional neural networks](http://papers.nips.cc/paper/9690-exact-combinatorial-optimization-with-graph-convolutional-neural-networks)*
 Gasse, Chételat, Ferroni, Charlin, and Lodi (2019) in Advances in Neural Information Processing Systems (pp. 15580-15592).
 
