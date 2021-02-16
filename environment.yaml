@@ -11,3 +11,9 @@ dependencies:
   - pip:
     - git+https://github.com/ds4dm/PySCIPOpt.git@ecole-benchmark
     - git+https://github.com/ds4dm/learn2branch@v1.0.0
+  - jupyter
+  - ipywidgets
+  - scipy
+  - pandas
+  - matplotlib
+  - seaborn
