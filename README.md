@@ -28,5 +28,5 @@ python -u -m ecole_vs_gasse.bench_observation --nl 100 --ipg 35 --seed 740 >> da
 ```
 
 ## Visualizing the results
-The notebook `Analysis.ipynb` provide code to analyse the results and reproduce the table of the
+The notebook [`Analysis.ipynb`](Analysis.ipynb) provide code to analyse the results and reproduce the table of the
 paper.
